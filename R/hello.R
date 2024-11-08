@@ -67,7 +67,8 @@ auc_wrapper <- function(model_output_size = 3L,
 #'
 #' zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.
 #'
-#' @examples
+#' @examplesIf reticulate::py_module_available("tensorflow")
+#'
 #' \donttest{
 #' library(keras)
 #' l <- zz()
