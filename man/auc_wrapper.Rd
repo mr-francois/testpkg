@@ -21,9 +21,10 @@ Compute AUC score as additional metric. If model has several output neurons with
 \examples{
 \dontshow{if (reticulate::py_module_available("tensorflow")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 
+input_shape <- 3
 \donttest{
 library(keras)
-model <- keras::keras_model_sequential(input_shape = c(3)) \%>\%
+model <- keras::keras_model_sequential(input_shape = input_shape) \%>\%
   keras::layer_dense(1, activation = "sigmoid")
 
 model \%>\% keras::compile(

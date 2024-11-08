@@ -1,11 +1,11 @@
-#' bla 123
+#' aaaaaa
 #'
-#' Compute AUC score as additional metric. If model has several output neurons with binary crossentropy loss, will use the average score.
+#' aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
 #'
 #' @examples
 #' aaa()
 #'
-#' @returns A keras metric.
+#' @returns A integer.
 #' @export
 aaa <- function() {
   a <- 2 + 2
@@ -24,9 +24,10 @@ aaa <- function() {
 #' or `"categorical_crossentropy"`.
 #' @examplesIf reticulate::py_module_available("tensorflow")
 #'
+#' input_shape <- 3
 #' \donttest{
 #' library(keras)
-#' model <- keras::keras_model_sequential(input_shape = c(3)) %>%
+#' model <- keras::keras_model_sequential(input_shape = input_shape) %>%
 #'   keras::layer_dense(1, activation = "sigmoid")
 #'
 #' model %>% keras::compile(
@@ -63,12 +64,35 @@ auc_wrapper <- function(model_output_size = 3L,
   return(auc_metric)
 }
 
-#' bla 333
+#' Custom model
+#'
+#' Custom model Custom model Custom model Custom model.
+#'
+#' @examplesIf reticulate::py_module_available("tensorflow")
+#'
+#' 2+2
+#' \donttest{
+#' library(keras)
+#' model <- custom_model()
+#' }
+#' @returns A keras model.
+#' @export
+custom_model <- function() {
+
+  custom_layer <- layer <- zz()
+  model <- keras::keras_model_sequential(input_shape = c(3)) %>%
+    custom_layer %>%
+    keras::layer_dense(1, activation = "sigmoid")
+  return(model)
+}
+
+#' zzzz
 #'
 #' zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.
 #'
 #' @examplesIf reticulate::py_module_available("tensorflow")
 #'
+#' 2+2
 #' \donttest{
 #' library(keras)
 #' l <- zz()
@@ -77,18 +101,22 @@ auc_wrapper <- function(model_output_size = 3L,
 #' @export
 zz <- function() {
 
+  super <- NULL
+  self <- NULL
+
   layer_1 <- keras::new_layer_class(
     "layer_1",
 
     initialize = function(method, multi_in=FALSE, ...) {
       super$initialize(...)
-      self$axis <- ifelse(multi_in, 0L, 1L)
+      self$axis <- 0L
       self$multi_in <- multi_in
     },
 
     call = function(inputs, mask = NULL) {
 
-      out <- tensorflow::tf$math$reduce_sum(inputs, axis = self$axis)
+      a <- tensorflow::tf$math$reduce_sum(c(1,2,3), axis = self$axis)
+      out <- inputs + a
       out
     },
 
@@ -98,6 +126,10 @@ zz <- function() {
       config
     }
   )
-  layer_1
+
+  return(layer_1())
+
+
 }
+
 

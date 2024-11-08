@@ -6,7 +6,6 @@
 #'
 "_PACKAGE"
 
-
 # globals
 .globals <- new.env(parent = emptyenv())
 
@@ -42,8 +41,5 @@
   #requireNamespace('tensorflow')
   tf_available <- reticulate::py_module_available("tensorflow")
 
-  # if (!.globals$tf_available) {
-  #   packageStartupMessage("TensorFlow is not available. Some examples will be skipped.")
-  # }
 }
 

@@ -2,15 +2,15 @@
 % Please edit documentation in R/hello.R
 \name{aaa}
 \alias{aaa}
-\title{bla 123}
+\title{aaaaaa}
 \usage{
 aaa()
 }
 \value{
-A keras metric.
+A integer.
 }
 \description{
-Compute AUC score as additional metric. If model has several output neurons with binary crossentropy loss, will use the average score.
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
 }
 \examples{
 aaa()
