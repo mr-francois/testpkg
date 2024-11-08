@@ -9,3 +9,7 @@
 pkg is an open source software library for building deep neural
 networks for genomic modeling.
 }
+\author{
+\strong{Maintainer}: René Mreches \email{rene.mreches@helmholtz-hzi.de}
+
+}

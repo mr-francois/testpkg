@@ -9,8 +9,8 @@ auc_wrapper(model_output_size = 3L, loss = "binary_crossentropy")
 \arguments{
 \item{model_output_size}{Number of neurons in model output layer.}
 
-\item{loss}{Loss function of model, for which metric will be applied to; must be `"binary_crossentropy"`
-or `"categorical_crossentropy"`.}
+\item{loss}{Loss function of model, for which metric will be applied to; must be \code{"binary_crossentropy"}
+or \code{"categorical_crossentropy"}.}
 }
 \value{
 A keras metric.
@@ -22,6 +22,7 @@ Compute AUC score as additional metric. If model has several output neurons with
 \dontshow{if (reticulate::py_module_available("tensorflow")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 
 \donttest{
+library(keras)
 model <- keras::keras_model_sequential(input_shape = c(3)) \%>\%
   keras::layer_dense(1, activation = "sigmoid")
 

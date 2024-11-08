@@ -25,6 +25,7 @@ aaa <- function() {
 #' @examplesIf reticulate::py_module_available("tensorflow")
 #'
 #' \donttest{
+#' library(keras)
 #' model <- keras::keras_model_sequential(input_shape = c(3)) %>%
 #'   keras::layer_dense(1, activation = "sigmoid")
 #'
@@ -66,11 +67,13 @@ auc_wrapper <- function(model_output_size = 3L,
 #'
 #' zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.
 #'
-#' @examplesIf reticulate::py_module_available("tensorflow")
+#' @examples
 #' \donttest{
-#' zz()
+#' library(keras)
+#' l <- zz()
 #' }
 #' @returns A keras layer.
+#' @export
 zz <- function() {
 
   layer_1 <- keras::new_layer_class(

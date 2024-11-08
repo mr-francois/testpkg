@@ -3,4 +3,5 @@
 export("%>%")
 export(aaa)
 export(auc_wrapper)
+export(zz)
 importFrom(magrittr,"%>%")

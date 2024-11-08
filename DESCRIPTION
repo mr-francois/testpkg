@@ -2,11 +2,34 @@ Package: testpkg
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
+Encoding: UTF-8
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
+Authors@R: c(
+       person(given = "René",
+              family = "Mreches",
+              role = c("aut", "cre"),
+              email = "rene.mreches@helmholtz-hzi.de")
+     )
+License: LGPL (>= 3)
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.5.0)
+Imports:
+    hdf5r,
+    keras,
+    tensorflow,
+    reticulate,
+    magrittr
+NeedsCompilation: yes
 RoxygenNote: 7.3.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    devtools,
+    spelling
+VignetteBuilder: 
+    knitr
+Language: en-US
