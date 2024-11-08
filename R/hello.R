@@ -44,7 +44,7 @@ aaa <- function() {
 #' }
 #'
 #' @returns A keras metric.
-auc_wrapper <- function(model_output_size,
+auc_wrapper <- function(model_output_size = 3L,
                         loss = "binary_crossentropy") {
 
   model <- keras::keras_model_sequential(input_shape = c(3)) %>%
@@ -55,16 +55,6 @@ auc_wrapper <- function(model_output_size,
     loss = "binary_crossentropy",
     metrics = "acc"
   )
-
-  multi_label <- FALSE
-  stopifnot(loss %in% c("binary_crossentropy", "categorical_crossentropy"))
-
-  if (loss == "categorical_crossentropy" & model_output_size != 2) {
-    stop("Output size must be two, when loss is categorical_crossentropy")
-  }
-
-  metric_name <- ifelse(loss == "binary_crossentropy" & model_output_size > 1,
-                        "mean_AUC", "AUC")
 
   auc_metric <- tensorflow::tf$keras$metrics$AUC(label_weights = NULL,
                                                  multi_label = FALSE)

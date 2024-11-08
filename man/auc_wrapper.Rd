@@ -4,7 +4,7 @@
 \alias{auc_wrapper}
 \title{Mean AUC score}
 \usage{
-auc_wrapper(model_output_size, loss = "binary_crossentropy")
+auc_wrapper(model_output_size = 3L, loss = "binary_crossentropy")
 }
 \arguments{
 \item{model_output_size}{Number of neurons in model output layer.}
