@@ -2,18 +2,10 @@
 title: "vignette1"
 output: rmarkdown::html_vignette
 vignette: >
-%\VignetteIndexEntry{Getting started}
+  %\VignetteIndexEntry{Getting started}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-  ---
-  
-```{r, message=FALSE}
-library(testpkg)
-if (reticulate::py_module_available("tensorflow")) {
-  library(keras)
-  library(magrittr)
-}
-```
+---
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -24,6 +16,15 @@ if (!reticulate::py_module_available("tensorflow")) {
 }
 
 ```
+  
+```{r, message=FALSE}
+library(testpkg)
+if (reticulate::py_module_available("tensorflow")) {
+  library(keras)
+  library(magrittr)
+}
+```
+
 
 ```{r}
 
