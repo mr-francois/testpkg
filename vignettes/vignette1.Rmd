@@ -9,28 +9,27 @@ vignette: >
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-if (!reticulate::py_module_available("tensorflow")) {
-  knitr::opts_chunk$set(eval = FALSE)
-} else {
-  knitr::opts_chunk$set(eval = TRUE)
-}
-
+# if (!reticulate::py_module_available("tensorflow")) {
+#   knitr::opts_chunk$set(eval = FALSE)
+# } else {
+#   knitr::opts_chunk$set(eval = TRUE)
+# }
+print(4)
 ```
   
 ```{r, message=FALSE}
-library(testpkg)
-if (reticulate::py_module_available("tensorflow")) {
-  library(keras)
-  library(magrittr)
-}
+# library(testpkg)
+# if (reticulate::py_module_available("tensorflow")) {
+#   library(keras)
+#   library(magrittr)
+# }
 ```
 
 
 ```{r}
-
-model <- keras::keras_model_sequential(input_shape = c(3)) %>%
-  keras::layer_dense(1, activation = "sigmoid")
-tensorflow::tf$is_tensor(1)
-
-auc <- auc_wrapper()
+# model <- keras::keras_model_sequential(input_shape = c(3)) %>%
+#   keras::layer_dense(1, activation = "sigmoid")
+# tensorflow::tf$is_tensor(1)
+# 
+# auc <- auc_wrapper()
 ```
