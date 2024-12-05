@@ -2,7 +2,4 @@
 
 export("%>%")
 export(aaa)
-export(auc_wrapper)
-export(custom_model)
-export(zz)
 importFrom(magrittr,"%>%")

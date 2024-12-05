@@ -39,7 +39,7 @@
 .onAttach <- function(libname, pkgname) {
 
   #requireNamespace('tensorflow')
-  tf_available <- reticulate::py_module_available("tensorflow")
+  #tf_available <- reticulate::py_module_available("tensorflow")
 
 }
 
